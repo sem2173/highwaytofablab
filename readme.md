@@ -7,7 +7,25 @@ High Way to Fab Lab
 
 ---------
 
+ 
+##Pré-requis :
+
+    Avoir installé Rails
+
+sudo gem install rails --no-ri --no-rdoc
+
+    Dans rbenv, être en environnement ruby 2.1.3
+
+**Commandes utiles**
+
+    rbenv versions  
+    rbenv install 2.1.3
+    rbenv global 2.1.3
+    rbenv rehash
+
+
 > Tout d'abord, pour commencer ou pousuivre un projet que l'on veut déployer sur **Heroku**, il faudra d'abord installer **PostgreSQL**. Voici un [tutoriel](http://wikimatze.de/installing-postgresql-gem-under-ubuntu-and-mac/) pour Mac et Linux. 
 
+> Url d'hébergement sur Heroku : https://highway-to-fablab.herokuapp.com/projects/new
+
 TODO
- 
