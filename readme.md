@@ -26,6 +26,6 @@ sudo gem install rails --no-ri --no-rdoc
 
 > Tout d'abord, pour commencer ou pousuivre un projet que l'on veut déployer sur **Heroku**, il faudra d'abord installer **PostgreSQL**. Voici un [tutoriel](http://wikimatze.de/installing-postgresql-gem-under-ubuntu-and-mac/) pour Mac et Linux. 
 
-> Url d'hébergement sur Heroku : https://highway-to-fablab.herokuapp.com/projects/new
+> Url d'hébergement sur Heroku : https://highway-to-fablab.herokuapp.com/
 
 TODO
