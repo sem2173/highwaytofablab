@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIRECTION="git@heroku.com:highwaytofablab.git"
+DIRECTION="git@heroku.com:highway-to-fablab.git"
 
 echo "Deploiement sur heroku"
 
