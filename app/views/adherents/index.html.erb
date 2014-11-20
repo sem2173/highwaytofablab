@@ -1,0 +1,19 @@
+<h1>Vous êtes sur la page inscription</h1>
+<p>ici c'est pour s'inscrire</p>
+
+
+<% @adherents.each do |adherent| %>
+
+	<p><%= link_to adherent.firstname, adherent %></p>
+	<p><%= adherent.lastname %></p>
+	<p><%= adherent.user_email %></p>
+	<p><%= adherent.phone %></p>
+	
+
+	<p><%= link_to "Edit", edit_adherent_path(adherent) %>
+	<%= link_to "Delete", adherent,:confirm => "Etes-vous sûr de vouloir supprimer votre profil ?", :method => :delete %></p>
+
+	<hr/>
+<% end %>
+
+<p><%= link_to "new adherent", new_adherent_path %></p>

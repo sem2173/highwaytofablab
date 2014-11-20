@@ -1,0 +1,50 @@
+<h1>Edit</h1>
+
+<%= form_for @project do |pf| %>
+<p>
+    <%= pf.label :name, 'Nom' %>
+    <br>
+<%= pf.text_field :name %>
+  </p>
+
+  <p>
+    <%= pf.label :description, 'Description' %>
+    <br/>
+    <%= pf.text_area :description, :size => "60x10", required: true %>
+  </p>
+
+  <p>
+    <%= pf.label :plan, 'Plan' %>
+    <br/>
+    <%=pf.text_field :plan, required: true%>
+  </p>
+
+  
+  <p>
+    <%= pf.label :duration, 'Temps estimé' %>
+    <br/>
+    <%= pf.text_field :duration, required: true %>
+  </p>
+
+  <p>
+    <%= pf.label :furnitures, 'Matériel' %>
+    <br/>
+    <%= pf.text_area :furnitures, required: true %>
+  </p>
+
+  <p>
+   <%= pf.label :author, 'Auteur' %>
+    <br/>
+    <%= pf.text_field :author, required: true %>
+  </p>
+
+  <p>
+    <%= pf.label :history, 'Histoire du projet' %>
+    <br/>
+    <%= pf.text_area :history, :size => "60x10", required: true %>
+  </p>
+
+  <p>
+    <%= pf.submit "Créer" %>
+  </p>
+<% end %>

@@ -1,0 +1,39 @@
+<h2>Votre nouveau projet</h2>
+
+<p>
+ <strong>Nom:</strong>
+ <%= @project.name %>
+</p>
+
+<p>
+ <strong>Description:</strong>
+ <%= @project.description %>
+</p>
+
+<p>
+ <strong>Plan:</strong>
+<%= @project.plan %>
+</p>
+
+<p>
+ <strong>Temps de construction estimé:</strong>
+ <%= @project.duration %>
+</p>
+
+<p>
+ <strong>Matériel:</strong>
+ <%= @project.furnitures %>
+</p>
+
+<p>
+ <strong>Auteur:</strong>
+ <%= @project.author %>
+</p>
+     
+<p>
+ <strong>Histoire du projet:</strong>
+ <%= @project.history %>
+</p>
+
+<%= link_to "Editer", edit_project_path(@project) %>
+<%= link_to "Retour", :back %></p>

@@ -1,0 +1,443 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "adherents" DISABLE TRIGGER ALL;ALTER TABLE "post_attachments" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "projects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "adherents"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 10:38:03', '2014-11-20 10:38:03', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 10:38:03', '2014-11-20 10:38:03', 298486374)
+  [1m[36m (4.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "adherents" ENABLE TRIGGER ALL;ALTER TABLE "post_attachments" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "projects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-----------------------------------
+ProjectsControllerTest: test_create
+-----------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>"truc", "description"=>"decription", "plan"=>"poiu", "duration"=>"23", "furnitures"=>"rtdtr", "author"=>"dftrd", "history"=>"fdtrdtb"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "dftrd"], ["created_at", "2014-11-20 10:38:03.767747"], ["description", "decription"], ["duration", "23"], ["furnitures", "rtdtr"], ["history", "fdtrdtb"], ["name", "truc"], ["plan", "poiu"], ["updated_at", "2014-11-20 10:38:03.767747"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/projects/15
+Completed 302 Found in 24ms (ActiveRecord: 6.8ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mProject Load (1.3ms)[0m  SELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+ProjectsControllerTest: test_error_on_create
+--------------------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>""}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://test.host/projects/new
+Completed 302 Found in 12ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------
+ProjectsControllerTest: test_index
+----------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "dftrd"], ["created_at", "2014-11-20 10:38:03.804158"], ["description", "decription"], ["duration", 23], ["furnitures", "rtdtr"], ["history", "fdtrdtb"], ["name", "project name"], ["plan", "poiu"], ["updated_at", "2014-11-20 10:38:03.804158"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 104ms (Views: 103.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------
+ProjectsControllerTest: test_new
+--------------------------------
+Processing by ProjectsController#new as HTML
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+ProjectsControllerTest: test_show
+---------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "dftrd"], ["created_at", "2014-11-20 10:38:03.933829"], ["description", "decription"], ["duration", 23], ["furnitures", "rtdtr"], ["history", "fdtrdtb"], ["name", "project name"], ["plan", "poiu"], ["updated_at", "2014-11-20 10:38:03.933829"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 17]]
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-------------------------------
+PageControllerTest: test_:about
+-------------------------------
+Processing by PageController#about as HTML
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+PageControllerTest: test_:contact
+---------------------------------
+Processing by PageController#contact as HTML
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------
+ProjectTest: test_have_valid_Fabricator
+---------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------
+ProjectTest: test_invalid_without_name
+--------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "adherents" DISABLE TRIGGER ALL;ALTER TABLE "post_attachments" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "projects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "adherents"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 10:46:00', '2014-11-20 10:46:00', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 10:46:00', '2014-11-20 10:46:00', 298486374)
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "adherents" ENABLE TRIGGER ALL;ALTER TABLE "post_attachments" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "projects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------
+PageControllerTest: test_:about
+-------------------------------
+Processing by PageController#about as HTML
+  Rendered page/about.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+PageControllerTest: test_:contact
+---------------------------------
+Processing by PageController#contact as HTML
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------
+ProjectsControllerTest: test_create
+-----------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>"truc", "description"=>"decription", "plan"=>"temps", "duration"=>"23", "furnitures"=>"matériel", "author"=>"auteur", "history"=>"histoire"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 10:46:00.216739"], ["description", "decription"], ["duration", "23"], ["furnitures", "matériel"], ["history", "histoire"], ["name", "truc"], ["plan", "temps"], ["updated_at", "2014-11-20 10:46:00.216739"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/projects/18
+Completed 302 Found in 20ms (ActiveRecord: 3.3ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mProject Load (0.6ms)[0m  SELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+ProjectsControllerTest: test_error_on_create
+--------------------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>""}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://test.host/projects/new
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------
+ProjectsControllerTest: test_index
+----------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 10:46:00.244950"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 10:46:00.244950"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------
+ProjectsControllerTest: test_new
+--------------------------------
+Processing by ProjectsController#new as HTML
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+ProjectsControllerTest: test_show
+---------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 10:46:00.271594"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 10:46:00.271594"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 20]]
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+ProjectTest: test_have_valid_Fabricator
+---------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------
+ProjectTest: test_invalid_without_name
+--------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "adherents" DISABLE TRIGGER ALL;ALTER TABLE "post_attachments" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "projects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "adherents"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 10:46:14', '2014-11-20 10:46:14', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 10:46:14', '2014-11-20 10:46:14', 298486374)
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "adherents" ENABLE TRIGGER ALL;ALTER TABLE "post_attachments" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "projects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------
+ProjectsControllerTest: test_create
+-----------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>"truc", "description"=>"decription", "plan"=>"temps", "duration"=>"23", "furnitures"=>"matériel", "author"=>"auteur", "history"=>"histoire"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 10:46:14.906435"], ["description", "decription"], ["duration", "23"], ["furnitures", "matériel"], ["history", "histoire"], ["name", "truc"], ["plan", "temps"], ["updated_at", "2014-11-20 10:46:14.906435"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/projects/21
+Completed 302 Found in 20ms (ActiveRecord: 4.0ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mProject Load (0.9ms)[0m  SELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+ProjectsControllerTest: test_error_on_create
+--------------------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>""}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://test.host/projects/new
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------
+ProjectsControllerTest: test_index
+----------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 10:46:14.934032"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 10:46:14.934032"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------
+ProjectsControllerTest: test_new
+--------------------------------
+Processing by ProjectsController#new as HTML
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+ProjectsControllerTest: test_show
+---------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 10:46:14.969791"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 10:46:14.969791"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+ProjectTest: test_have_valid_Fabricator
+---------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------
+ProjectTest: test_invalid_without_name
+--------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------
+PageControllerTest: test_:about
+-------------------------------
+Processing by PageController#about as HTML
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+PageControllerTest: test_:contact
+---------------------------------
+Processing by PageController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  ALTER TABLE "adherents" DISABLE TRIGGER ALL;ALTER TABLE "post_attachments" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "projects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "adherents"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 13:49:17', '2014-11-20 13:49:17', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 13:49:17', '2014-11-20 13:49:17', 298486374)
+  [1m[36m (17.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "adherents" ENABLE TRIGGER ALL;ALTER TABLE "post_attachments" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "projects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------
+PageControllerTest: test_:about
+-------------------------------
+Processing by PageController#about as HTML
+  Rendered page/about.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+PageControllerTest: test_:contact
+---------------------------------
+Processing by PageController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+ProjectTest: test_have_valid_Fabricator
+---------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------
+ProjectTest: test_invalid_without_name
+--------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------
+ProjectsControllerTest: test_create
+-----------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>"truc", "description"=>"decription", "plan"=>"temps", "duration"=>"23", "furnitures"=>"matériel", "author"=>"auteur", "history"=>"histoire"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 13:49:17.188802"], ["description", "decription"], ["duration", "23"], ["furnitures", "matériel"], ["history", "histoire"], ["name", "truc"], ["plan", "temps"], ["updated_at", "2014-11-20 13:49:17.188802"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/projects/24
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mProject Load (0.9ms)[0m  SELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+ProjectsControllerTest: test_error_on_create
+--------------------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>""}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://test.host/projects/new
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------
+ProjectsControllerTest: test_index
+----------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 13:49:17.215006"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 13:49:17.215006"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------
+ProjectsControllerTest: test_new
+--------------------------------
+Processing by ProjectsController#new as HTML
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+ProjectsControllerTest: test_show
+---------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 13:49:17.253271"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 13:49:17.253271"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 26]]
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.2ms)[0m  ALTER TABLE "adherents" DISABLE TRIGGER ALL;ALTER TABLE "post_attachments" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "projects" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (2.6ms)[0m  DELETE FROM "adherents"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 13:49:42', '2014-11-20 13:49:42', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "adherents" ("firstname", "lastname", "user_email", "phone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2014-11-20 13:49:42', '2014-11-20 13:49:42', 298486374)
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "adherents" ENABLE TRIGGER ALL;ALTER TABLE "post_attachments" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "projects" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+ProjectTest: test_have_valid_Fabricator
+---------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------
+ProjectTest: test_invalid_without_name
+--------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------
+PageControllerTest: test_:about
+-------------------------------
+Processing by PageController#about as HTML
+  Rendered page/about.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+PageControllerTest: test_:contact
+---------------------------------
+Processing by PageController#contact as HTML
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------
+ProjectsControllerTest: test_create
+-----------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>"truc", "description"=>"decription", "plan"=>"temps", "duration"=>"23", "furnitures"=>"matériel", "author"=>"auteur", "history"=>"histoire"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 13:49:42.877636"], ["description", "decription"], ["duration", "23"], ["furnitures", "matériel"], ["history", "histoire"], ["name", "truc"], ["plan", "temps"], ["updated_at", "2014-11-20 13:49:42.877636"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/projects/27
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT  "projects".* FROM "projects"   ORDER BY "projects"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+ProjectsControllerTest: test_error_on_create
+--------------------------------------------
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"name"=>""}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://test.host/projects/new
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------
+ProjectsControllerTest: test_index
+----------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 13:49:42.902822"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 13:49:42.902822"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------
+ProjectsControllerTest: test_new
+--------------------------------
+Processing by ProjectsController#new as HTML
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+ProjectsControllerTest: test_show
+---------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "auteur"], ["created_at", "2014-11-20 13:49:42.939120"], ["description", "decription"], ["duration", 23], ["furnitures", "matériel"], ["history", "histoire"], ["name", "project name"], ["plan", "temps"], ["updated_at", "2014-11-20 13:49:42.939120"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 29]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ecofablab</title>
+<%= stylesheet_link_tag "application" %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<h1><%= link_to "Ecodesign FAB LAB", root_path %></h1>
+	</header>
+	
+  <nav>
+  	<ul>
+    	<li><%= link_to "A propos", page_about_path%></li>
+    	<li><%= link_to "Contact", page_contact_path%></li>
+  	</ul>
+	</nav>
+  
+  <% flash.each do |key, value| %>
+    <p class="<%= key %>"><%= value %></p>
+  <% end %> 
+
+  <%= yield %>
+
+</body>
+</html>

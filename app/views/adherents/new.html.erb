@@ -1,0 +1,31 @@
+<h2> Saisissez votre profil</h2>
+<%= render partial: 'partials/resource_errors', locals: { resource: @adherent } %>
+
+<%= form_for @adherent do |f| %>
+  <p>
+  	<%= f.label :firstname, 'Prénom' %><br>
+    <%= f.text_field :firstname %>
+  </p>
+
+  <p>
+  	<%= f.label :lastname, 'Nom' %><br>
+    <%= f.text_field :lastname %>
+  </p>
+ 
+  <p>
+  	<%= f.label :phone, 'Téléphone' %><br>
+    <%= f.text_field :phone %>
+  </p>
+
+  <p>
+  	<%= f.label :user_email, 'Email' %><br>
+    <%= f.text_field :user_email %>
+  </p>
+
+  
+ 
+  <p>
+    <%= f.submit 'Mise à jour' %>
+
+  </p>
+<% end %>

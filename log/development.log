@@ -1,0 +1,1396 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 11:39:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (19.3ms)
+Completed 200 OK in 140ms (Views: 119.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:39:25 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:39:25 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:39:25 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 11:49:29 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (15.4ms)
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:29 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:29 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:29 +0100
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-11-20 11:49:34 +0100
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.erb within layouts/application (15.3ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:34 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:34 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:34 +0100
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-11-20 11:49:54 +0100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "project"=>{"name"=>"sem", "description"=>"tttt", "plan"=>"hkjjhh", "duration"=>"hjkhk", "furnitures"=>"hjkjhkjh", "author"=>"hjhkj", "history"=>"hjkjkjh"}, "commit"=>"Créer"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "hjhkj"], ["created_at", "2014-11-20 10:49:54.928545"], ["description", "tttt"], ["duration", "hjkhk"], ["furnitures", "hjkjhkjh"], ["history", "hjkjkjh"], ["name", "sem"], ["plan", "hkjjhh"], ["updated_at", "2014-11-20 10:49:54.928545"]]
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/12
+Completed 302 Found in 20ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/projects/12" for 127.0.0.1 at 2014-11-20 11:49:54 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered projects/show.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:55 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:55 +0100
+
+
+Started GET "/projects/12/edit" for 127.0.0.1 at 2014-11-20 11:49:58 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mProject Load (0.6ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered projects/edit.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:58 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:49:58 +0100
+
+
+Started GET "/projects/12/edit" for 127.0.0.1 at 2014-11-20 11:52:35 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered projects/edit.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:35 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:35 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 11:52:52 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (3.3ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:52 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:52 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:52 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 11:52:55 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:55 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 11:52:55 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:08:53 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (4.2ms)
+Completed 200 OK in 43ms (Views: 35.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:08:53 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:08:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:08:53 +0100
+
+
+Started GET "/adherents/new" for 127.0.0.1 at 2014-11-20 14:08:58 +0100
+Processing by AdherentsController#new as HTML
+  Rendered adherents/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 20ms
+
+SyntaxError (/home/semia/high_way_to_fab_lab/app/views/adherents/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+....append=( f.label :user_email 'Email' );@output_buffer.safe_...
+...                               ^):
+  app/views/adherents/new.html.erb:21: syntax error, unexpected tSTRING_BEG, expecting ')'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.2ms)
+
+
+Started GET "/adherents/new" for 127.0.0.1 at 2014-11-20 14:09:38 +0100
+Processing by AdherentsController#new as HTML
+  Rendered partials/_resource_errors.html.erb (0.6ms)
+  Rendered adherents/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 43ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:09:39 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:09:39 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:09:39 +0100
+
+
+Started POST "/adherents" for 127.0.0.1 at 2014-11-20 14:09:52 +0100
+Processing by AdherentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "adherent"=>{"firstname"=>"test", "lastname"=>"test", "phone"=>"test", "user_email"=>"email"}, "commit"=>"Mise à jour"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.4ms)[0m  ROLLBACK
+  Rendered partials/_resource_errors.html.erb (0.9ms)
+  Rendered adherents/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 85ms (Views: 20.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:09:52 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:09:52 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:09:52 +0100
+
+
+Started POST "/adherents" for 127.0.0.1 at 2014-11-20 14:10:03 +0100
+Processing by AdherentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "adherent"=>{"firstname"=>"test", "lastname"=>"test", "phone"=>"test", "user_email"=>"semia@gmail.com"}, "commit"=>"Mise à jour"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.4ms)[0m  INSERT INTO "adherents" ("created_at", "firstname", "lastname", "phone", "updated_at", "user_email") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-11-20 13:10:03.178859"], ["firstname", "test"], ["lastname", "test"], ["phone", "test"], ["updated_at", "2014-11-20 13:10:03.178859"], ["user_email", "semia@gmail.com"]]
+  [1m[36m (14.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/adherents/1
+Completed 302 Found in 28ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/adherents/1" for 127.0.0.1 at 2014-11-20 14:10:03 +0100
+Processing by AdherentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdherent Load (0.6ms)[0m  SELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered adherents/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:10:03 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:10:03 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:10:03 +0100
+
+
+Started GET "/adherents/1/edit" for 127.0.0.1 at 2014-11-20 14:10:05 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdherent Load (0.4ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered adherents/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:10:05 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:10:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:10:05 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:12:47 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:12:47 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:12:47 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:12:47 +0100
+
+
+Started GET "/projects/12/edit" for 127.0.0.1 at 2014-11-20 14:12:52 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered projects/edit.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:12:53 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:12:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:12:53 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:13:13 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.6ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:13:13 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:13:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:13:13 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:13:18 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:13:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:13:18 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:13:18 +0100
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2014-11-20 14:14:46 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered projects/show.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 20.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:46 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:46 +0100
+
+
+Started GET "/adherents/1/edit" for 127.0.0.1 at 2014-11-20 14:14:49 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdherent Load (0.4ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered adherents/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 21.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:49 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:49 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:50 +0100
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2014-11-20 14:14:58 +0100
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:58 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:14:58 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:16:40 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (4.3ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:16:40 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:16:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:16:40 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:21:16 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (16.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:21:16 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:21:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:21:16 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:21:29 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:21:29 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:21:29 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:21:29 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:22:16 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:16 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:16 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:22:19 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.8ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (23.5ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined local variable or method `adherent' for #<#<Class:0x007fa23c488088>:0x007fa23b29b9d8>):
+    12: 	<p><%= link_to project.history %></p>
+    13: 	
+    14:     
+    15:     <p><%= link_to "Edit", edit_adherent_path(adherent) %>
+    16: 	</p>
+    17: 
+    18: 	<hr/>
+  app/views/projects/index.erb:15:in `block in _app_views_projects_index_erb___1559647497264345687_70167376989560'
+  app/views/projects/index.erb:4:in `_app_views_projects_index_erb___1559647497264345687_70167376989560'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.4ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:22:54 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (16.7ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:54 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:54 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:54 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:22:58 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:58 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:22:58 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:23:08 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:23:08 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:23:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:23:09 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:23:13 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (16.9ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:23:13 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:23:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:23:13 +0100
+
+
+Started GET "/projects/11/edit" for 127.0.0.1 at 2014-11-20 14:24:41 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered projects/edit.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 19.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:24:42 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:24:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:24:42 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:29:05 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.8ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (26.0ms)
+Completed 200 OK in 44ms (Views: 37.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:05 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:05 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:29:10 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:10 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:10 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:10 +0100
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-11-20 14:29:36 +0100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "project"=>{"name"=>"fdfds", "description"=>"fdfdsfd", "plan"=>"fdfdsfds", "duration"=>"fdfds", "furnitures"=>"fddfsfds", "author"=>"fdfdsdfs", "history"=>"fdfdfds"}, "commit"=>"Créer"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "fdfdsdfs"], ["created_at", "2014-11-20 13:29:36.816601"], ["description", "fdfdsfd"], ["duration", "fdfds"], ["furnitures", "fddfsfds"], ["history", "fdfdfds"], ["name", "fdfds"], ["plan", "fdfdsfds"], ["updated_at", "2014-11-20 13:29:36.816601"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/13
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/13" for 127.0.0.1 at 2014-11-20 14:29:36 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  Rendered projects/show.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:37 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:37 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:29:37 +0100
+
+
+Started GET "/adherents/13/edit" for 127.0.0.1 at 2014-11-20 14:29:41 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mAdherent Load (0.4ms)[0m  SELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Adherent with 'id'=13):
+  app/controllers/adherents_controller.rb:26:in `edit'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/adherents/13/edit" for 127.0.0.1 at 2014-11-20 14:30:08 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAdherent Load (0.4ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Adherent with 'id'=13):
+  app/controllers/adherents_controller.rb:26:in `edit'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:31:38 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (23.6ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:38 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:38 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:31:40 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (16.5ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:40 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:40 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:31:42 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (17.0ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:42 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:42 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:31:43 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:43 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:43 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:31:43 +0100
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-11-20 14:32:02 +0100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "project"=>{"name"=>"dssqd", "description"=>"dsdsqdsq", "plan"=>"dsqdsqdsq", "duration"=>"dsdsq", "furnitures"=>"dsdsqdsq", "author"=>"dsdsq", "history"=>"dsqdssdq"}, "commit"=>"Créer"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "dsdsq"], ["created_at", "2014-11-20 13:32:02.125068"], ["description", "dsdsqdsq"], ["duration", "dsdsq"], ["furnitures", "dsdsqdsq"], ["history", "dsqdssdq"], ["name", "dssqd"], ["plan", "dsqdsqdsq"], ["updated_at", "2014-11-20 13:32:02.125068"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/14
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/projects/14" for 127.0.0.1 at 2014-11-20 14:32:02 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  Rendered projects/show.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:32:02 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:32:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:32:02 +0100
+
+
+Started GET "/adherents/14/edit" for 127.0.0.1 at 2014-11-20 14:32:04 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mAdherent Load (0.5ms)[0m  SELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1  [["id", 14]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Adherent with 'id'=14):
+  app/controllers/adherents_controller.rb:26:in `edit'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/adherents/14/edit" for 127.0.0.1 at 2014-11-20 14:32:50 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAdherent Load (0.3ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 14]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Adherent with 'id'=14):
+  app/controllers/adherents_controller.rb:26:in `edit'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/adherents/14/edit" for 127.0.0.1 at 2014-11-20 14:32:51 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mAdherent Load (0.3ms)[0m  SELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1  [["id", 14]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Adherent with 'id'=14):
+  app/controllers/adherents_controller.rb:26:in `edit'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:33:00 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (22.2ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:00 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:00 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:33:02 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:03 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:03 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:03 +0100
+
+
+Started POST "/projects" for 127.0.0.1 at 2014-11-20 14:33:16 +0100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "project"=>{"name"=>"dsqdsq", "description"=>"dsqdsq", "plan"=>"dsds", "duration"=>"dssdq", "furnitures"=>"dssd", "author"=>"dsdsq", "history"=>"dsqdsq"}, "commit"=>"Créer"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "projects" ("author", "created_at", "description", "duration", "furnitures", "history", "name", "plan", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "dsdsq"], ["created_at", "2014-11-20 13:33:16.061757"], ["description", "dsqdsq"], ["duration", "dssdq"], ["furnitures", "dssd"], ["history", "dsqdsq"], ["name", "dsqdsq"], ["plan", "dsds"], ["updated_at", "2014-11-20 13:33:16.061757"]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/15
+Completed 302 Found in 9ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/projects/15" for 127.0.0.1 at 2014-11-20 14:33:16 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered projects/show.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:16 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:16 +0100
+
+
+Started GET "/projects/15/edit" for 127.0.0.1 at 2014-11-20 14:33:17 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered projects/edit.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:17 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:17 +0100
+
+
+Started GET "/projects" for 127.0.0.1 at 2014-11-20 14:33:28 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.8ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (21.4ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:28 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:28 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:33:30 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:31 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:31 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:31 +0100
+
+
+Started GET "/adherents/1/edit" for 127.0.0.1 at 2014-11-20 14:33:41 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdherent Load (0.3ms)[0m  SELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered adherents/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:42 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:42 +0100
+
+
+Started PATCH "/adherents/1" for 127.0.0.1 at 2014-11-20 14:33:46 +0100
+Processing by AdherentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "adherent"=>{"firstname"=>"test", "lastname"=>"test", "phone"=>"test", "user_email"=>"semia@gmail.com"}, "commit"=>"Mise à jour", "id"=>"1"}
+  [1m[36mAdherent Load (0.3ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/adherents/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/adherents/1" for 127.0.0.1 at 2014-11-20 14:33:46 +0100
+Processing by AdherentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdherent Load (0.2ms)[0m  SELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered adherents/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:46 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:46 +0100
+
+
+Started GET "/adherents/1/edit" for 127.0.0.1 at 2014-11-20 14:33:48 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdherent Load (0.3ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered adherents/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:49 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:49 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:49 +0100
+
+
+Started GET "/adherents/" for 127.0.0.1 at 2014-11-20 14:33:54 +0100
+Processing by AdherentsController#index as HTML
+  [1m[35mAdherent Load (0.7ms)[0m  SELECT "adherents".* FROM "adherents"
+  Rendered adherents/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:54 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:54 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:54 +0100
+
+
+Started GET "/adherents/1/edit" for 127.0.0.1 at 2014-11-20 14:33:58 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdherent Load (0.3ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered adherents/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:58 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:33:58 +0100
+
+
+Started GET "/adherents/" for 127.0.0.1 at 2014-11-20 14:34:03 +0100
+Processing by AdherentsController#index as HTML
+  [1m[35mAdherent Load (0.4ms)[0m  SELECT "adherents".* FROM "adherents"
+  Rendered adherents/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:03 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:03 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:03 +0100
+
+
+Started GET "/adherents/new" for 127.0.0.1 at 2014-11-20 14:34:07 +0100
+Processing by AdherentsController#new as HTML
+  Rendered partials/_resource_errors.html.erb (0.1ms)
+  Rendered adherents/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:07 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:07 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:07 +0100
+
+
+Started POST "/adherents" for 127.0.0.1 at 2014-11-20 14:34:16 +0100
+Processing by AdherentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yfc1L8Peyd6UkLHwHlyGHTyWOXvswJo8rDrJ91NLNc=", "adherent"=>{"firstname"=>"dsdsq", "lastname"=>"dsdsqdsq", "phone"=>"dsqdsqsq", "user_email"=>"sem@gmal.com"}, "commit"=>"Mise à jour"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "adherents" ("created_at", "firstname", "lastname", "phone", "updated_at", "user_email") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-11-20 13:34:16.674587"], ["firstname", "dsdsq"], ["lastname", "dsdsqdsq"], ["phone", "dsqdsqsq"], ["updated_at", "2014-11-20 13:34:16.674587"], ["user_email", "sem@gmal.com"]]
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/adherents/2
+Completed 302 Found in 8ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/adherents/2" for 127.0.0.1 at 2014-11-20 14:34:16 +0100
+Processing by AdherentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdherent Load (0.3ms)[0m  SELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered adherents/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:16 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:34:16 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:35:34 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (23.4ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:35:34 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:35:34 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:35:34 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:36:14 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:36:14 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:36:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:36:14 +0100
+
+
+Started GET "/project" for 127.0.0.1 at 2014-11-20 14:36:36 +0100
+
+ActionController::RoutingError (No route matches [GET] "/project"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:36:39 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (20.3ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:36:39 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:36:39 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:36:39 +0100
+
+
+Started GET "/projects/15/edit" for 127.0.0.1 at 2014-11-20 14:37:23 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered projects/edit.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:24 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:24 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:24 +0100
+
+
+Started GET "/adherents/15/edit" for 127.0.0.1 at 2014-11-20 14:37:37 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mAdherent Load (0.4ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 15]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Adherent with 'id'=15):
+  app/controllers/adherents_controller.rb:26:in `edit'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+
+
+Started GET "/adherents/" for 127.0.0.1 at 2014-11-20 14:37:43 +0100
+Processing by AdherentsController#index as HTML
+  [1m[35mAdherent Load (0.6ms)[0m  SELECT "adherents".* FROM "adherents"
+  Rendered adherents/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:43 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:43 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:43 +0100
+
+
+Started GET "/adherents/1/edit" for 127.0.0.1 at 2014-11-20 14:37:48 +0100
+Processing by AdherentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdherent Load (0.3ms)[0m  [1mSELECT  "adherents".* FROM "adherents"  WHERE "adherents"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered adherents/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:48 +0100
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:37:48 +0100
+
+
+Started GET "/project/1/edit" for 127.0.0.1 at 2014-11-20 14:38:23 +0100
+
+ActionController::RoutingError (No route matches [GET] "/project/1/edit"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.6ms)
+
+
+Started GET "/project/" for 127.0.0.1 at 2014-11-20 14:38:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/project"):
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/semia/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.1ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:38:29 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (21.3ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:38:29 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:38:29 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:38:29 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:45:10 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:45:10 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:45:10 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:45:10 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:47:41 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered projects/edit.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `to_key' for #<Class:0x007fa23c825a10>):
+    1: <h1>Edit</h1>
+    2: 
+    3: <%= form_for Project do |pf| %>
+    4: <p>
+    5:     <%= pf.label :name, 'Nom' %>
+    6:     <br>
+  app/views/projects/edit.html.erb:3:in `_app_views_projects_edit_html_erb__3428874541885657750_70167392441760'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:47:47 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.erb within layouts/application (25.3ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:47:48 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:47:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:47:48 +0100
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:47:50 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered projects/edit.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `to_key' for #<Class:0x007fa23c825a10>):
+    1: <h1>Edit</h1>
+    2: 
+    3: <%= form_for Project do |pf| %>
+    4: <p>
+    5:     <%= pf.label :name, 'Nom' %>
+    6:     <br>
+  app/views/projects/edit.html.erb:3:in `_app_views_projects_edit_html_erb__3428874541885657750_70167392441760'
+
+
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/semia/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2014-11-20 14:48:22 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered projects/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:22 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:22 +0100
+
+
+Started GET "/projects/" for 127.0.0.1 at 2014-11-20 14:48:31 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.erb within layouts/application (33.2ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:32 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:32 +0100
+
+
+Started GET "/projects/4/edit" for 127.0.0.1 at 2014-11-20 14:48:36 +0100
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered projects/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/adherents.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 +0100
+
+
+Started GET "/assets/page.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 +0100

@@ -1,0 +1,21 @@
+<h2>Index project</h2>
+
+<ul>
+<% @projects.each do |project| %>
+
+    <p><%= link_to project.name %></p>
+	<p><%= link_to project.description %></p>
+	<p><%= link_to project.plan %></p>
+	<p><%= link_to project.duration %></p>
+	<p><%= link_to project.furnitures %></p>
+	<p><%= link_to project.author %></p>
+	<p><%= link_to project.history %></p>
+	
+    
+    <p><%= link_to "Edit", edit_project_path(project) %>
+	</p>
+
+	<hr/>
+<% end %>
+
+<p><%= link_to "nouveau projet", new_project_path %></p>

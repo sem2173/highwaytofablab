@@ -1,0 +1,26 @@
+<p>
+  <strong>Prénom:</strong>
+  <%= @adherent.firstname %>
+</p>
+ 
+<p>
+  <strong>Nom:</strong>
+  <%= @adherent.lastname %>
+</p>
+
+<p>
+  <strong>Téléphone:</strong>
+  <%= @adherent.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @adherent.user_email %>
+</p>
+
+<small><%= @adherent.created_at %></small>
+
+<p>
+<%= link_to "Editer", edit_adherent_path(@adherent) %>
+<%= link_to "Effacer", adherent_path(@adherent), :method => :delete, :confirm => "êtes vous sure ?" %>
+<%= link_to "Retour", :back %></p>
